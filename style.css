@@ -1,0 +1,219 @@
+/* * {border: 1px solid red;} */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Golos Text", monospace;
+    color: var(--light1);
+    box-sizing: border-box;
+}
+
+:root {
+    --dark1: #070716;
+    --dark2: #181825;
+    --dark3: #1e1e2e;
+    --dark4: #26283f;
+    --dark5: #3e3e5e;
+
+    --light1: #cdd6f4;
+    --light2: #9399b2;
+    --light3: #797f95;
+
+    --highlight: #ee99a0;
+    --lowlight: #ed8796;
+
+    --red: #d9515c;
+    --green: #53b15a;
+}
+
+body {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark3);
+}
+
+.main {
+    height: 75%;
+    width: 70%;
+    display: flex;
+}
+
+.stage-buttons {
+    height: 100%;
+    width: 14%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stage-button-column-container {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stage-button-column {
+    height: 100%;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stage-button-container {
+    height: 4.25%;
+    width: 100%;
+}
+
+.extra-list-button-container {
+    height: 4.15%;
+    width: 100%;
+}
+
+.stage-button {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background-color: var(--dark2);
+    border: 1px solid var(--dark2);
+    font-size: 11px;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, border 0.5s;
+    cursor: pointer;
+}
+
+.stage-button:hover {
+    background-color: var(--dark1);
+    border: 1px solid var(--lowlight);
+}
+
+.stage-button-selected {
+    background-color: var(--dark1);
+}
+
+.test-options {
+    height: 100%;
+    width: 43%;
+    padding: 10px;
+    position: relative;
+}
+
+.select-stages-prompt {
+    color: var(--light2);
+}
+
+.test-options-title {
+    color: var(--light1);
+    margin-top: 15px;
+}
+
+.test-options-buttons {
+    margin-top: 10px;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.test-options-button {
+    height: 18.5%;
+    width: 100%;
+    padding-left: 4%;
+    border-radius: 5px;
+    background-color: var(--dark4);
+    border: 1px solid var(--dark4);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.5s, border 0.5s;
+}
+
+.test-options-button:hover {
+    background-color: var(--dark5);
+    border: 1px solid var(--lowlight);
+}
+
+.test-options-button-selected {
+    background-color: var(--dark5);
+}
+
+.test-options-input {
+    margin-top: 12px;
+    height: 10%;
+    width: 100%;
+    padding-left: 4%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: var(--dark2);
+    color: var(--light1);
+    font-size: 16px;
+}
+
+.test-options-input::placeholder {
+    color: var(--light3);
+}
+
+.test-preview {
+    margin-top: 10px;
+    padding-left: 3px;
+    color: var(--light2);
+}
+
+.start-button-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+}
+
+.start-button {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark1);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.5s;
+    background-color: var(--lowlight);
+}
+
+.start-button:hover {
+    background-color: var(--highlight);
+}
+
+.settings {
+    height: 100%;
+    width: 43%;
+    padding: 10px;
+}
+
+@keyframes shake {
+    0%   {transform: translate(1px, 0px) rotate(0deg); }
+    10%  {transform: translate(-1px, 0px) rotate(0deg); }
+    20%  {transform: translate(-3px, 0px) rotate(0deg); }
+    30%  {transform: translate(1px, 0px) rotate(0deg); }
+    40%  {transform: translate(1px, 0px) rotate(0deg); }
+    50%  {transform: translate(-3px, 0px) rotate(0deg); }
+    60%  {transform: translate(-1px, 0px) rotate(0deg); }
+    70%  {transform: translate(2px, 0px) rotate(0deg); }
+    80%  {transform: translate(-3px, 0px) rotate(0deg); }
+    90%  {transform: translate(1px, 0px) rotate(0deg); }
+    100% { transform: translate(3px, 0px) rotate(0deg); }
+}
